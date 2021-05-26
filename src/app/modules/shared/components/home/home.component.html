@@ -1,0 +1,41 @@
+
+
+ <!--  <div class="p-grid">
+  <div class="p-col-4" *ngFor="let newData of data">
+    <div>
+      <video controls (click)="toggleVideo()" #videoPlayer>
+        <source src='https://youtu.be/htPYk6QxacQ?t=1' type="video/mp4"
+        data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
+		 />
+        Browser not supported
+      </video>
+
+      <div> {{newData.name}} </div>
+      <div class="p-grid">
+        <div class="p-col-6" >{{newData.author}}
+        </div>
+
+        <div class="p-col-6">{{newData.duration}}
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div> -->
+<div id="instruction">
+<div class="p-grid">
+  <div class="p-col-4" *ngFor="let newData of data"> 
+    <video  id="my_video_1" controls (click)="toggleVideo()" #videoPlayer height="240" width="340">
+      <source src='https://vjs.zencdn.net/v/oceans.mp4' type="video/mp4"/>
+      Browser not supported
+    </video><br>
+    <button (click)="playPause()">Play/Pause</button>
+
+
+    <div class="p-col-6">{{newData.video}}</div>
+
+  <div class="p-col-6">{{newData.author}}</div>
+  <div class="p-col-5">{{newData.name}}</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="chat">
+    <div class="chat-header">
+      <img [attr.src]="contact.avatar" alt="" class="avatar">
+      {{ contact.name }}
+    </div>
+    <div class="chat-messages">
+      <div class="chat-message" *ngFor="let message of messages" [class.user-message]="message.user === user"
+        [class.contact-message]="message.user === contact">
+        <div class="message-author">
+          <img [attr.src]="message.user.avatar" alt="" class="avatar">
+        </div>
+
+        <div class="message-text">
+          {{ message.message }}
+        </div>
+      </div>
+    </div>
+    <div>
+      <input (keyup.enter)="onKeyUp($event)">
+      <p> {{text}}
+      <p>
+
+    </div>
+  </div>
+</div>

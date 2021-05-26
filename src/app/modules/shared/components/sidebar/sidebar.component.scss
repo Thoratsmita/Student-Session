@@ -1,0 +1,38 @@
+
+.mat-sidenav-container{
+  margin-left: 0%;
+  display: flex;
+  
+}
+
+.mat-sidenav{    
+    position: relative;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width:150px;
+    }
+
+    .mat-sidenav-content {
+    margin-left: 10px !important;
+    width: calc(100% - 150px);
+    overflow: hidden;
+    margin-top:20px ; 
+    }
+    
+    .mat-icon{
+      margin:10px;
+    }
+    
+    
+.sidebar {  
+    display: grid; 
+.sidebar-menu {
+  margin: 10px 0 10px 5px;
+  color: black;
+}
+.sidebar-nav{
+  display: flex;
+}
+}

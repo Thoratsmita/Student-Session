@@ -1,0 +1,183 @@
+
+h1 {
+  margin: 10px 0 0 0;
+  text-align: center;
+  color: red;
+}
+
+h2 {
+  margin: 10px 0 0 0;
+}
+
+.login-form {
+  display: grid;
+  margin: 36px 0;
+}
+
+.sign-in-next {
+  text-align: right;
+}
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+.login {
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 24px 24px 36px;
+}
+
+.logo-image {
+  height: 28px;
+}
+
+.head-sign-in {
+  color: #202124;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 1.5;
+  padding-bottom: 0;
+  padding-top: 8px;
+}
+
+.account-link {
+  color: #1a73e8;
+  line-height: 1.4286;
+  text-transform: none;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: right;
+}
+
+.footer {
+  height: 16.8px;
+  padding: 16px 0 0;
+  position: absolute;
+  width: 100%;
+  text-align: right;
+}
+
+.footer-button {
+  color: #757575;
+  font-size: 14px;
+}
+
+@media (min-width: 500px) {
+  .login-container {
+    width: 420px;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    display: block;
+    flex-shrink: 0;
+    margin: 0 auto;
+    min-height: 0;
+    transition: 0.2s;
+    background: #fff;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .container::before {
+    min-height: 48px;
+    content: "";
+    display: block;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    height: 24px;
+  }
+
+  .container::after {
+    content: "";
+    display: block;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    height: 24px;
+    min-height: 63.9996px;
+  }
+}
+
+@media (min-width: 450px) {
+  .login {
+    padding: 48px 40px 36px;
+  }
+}
+
+.error {
+    margin-right: 3px;
+}
+
+.error-span {
+  vertical-align: top;
+}
+
+.mat-error {
+  display: grid !important;
+}
+
+.sign-in-error {
+  text-align: left;
+  margin-top: -4px;
+}
+
+.width50{
+  width: 50%;
+}
+
+.align-right{
+  text-align: right;
+}
+
+.align-left{
+  text-align: left;
+}
+.align-center{
+
+  text-align:center;
+
+}
+
+.bottom-button{
+  display: block;
+  
+
+}
+
+.mt8{
+  margin-top: 8px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url("https://wallpaperaccess.com/full/656670.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

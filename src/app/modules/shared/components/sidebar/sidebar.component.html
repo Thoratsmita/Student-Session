@@ -1,0 +1,32 @@
+  <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over':'side'" [opened]="(isHandset$ | async) === false">
+<br>
+<br>
+    <mat-nav-list class="sidebar">
+      <div class="sidebar-nav">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+        <a mat-nav-list-item class="sidebar-menu" [routerLink]="['/add-user']">Home</a>
+      </div>
+      <div class="sidebar-nav">
+        <mat-icon>schedule</mat-icon>
+        <a mat-nav-list-item class="sidebar-menu" [routerLink]="['/view']">Schedule </a>
+      </div>
+      <div class="sidebar-nav">
+        <mat-icon>links</mat-icon>
+        <a mat-nav-list-item class="sidebar-menu" [routerLink]="['/links']">Links</a>
+      </div>
+      <div class="sidebar-nav">
+        <mat-icon>class</mat-icon>
+        <a mat-nav-list-item class="sidebar-menu" [routerLink]="['/course']">Course</a>
+      </div>
+      <div class="sidebar-nav">
+        <mat-icon>article</mat-icon>
+        <a mat-nav-list-item class="sidebar-menu" [routerLink]="['/form']">Form</a>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

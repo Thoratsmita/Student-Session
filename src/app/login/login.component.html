@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="bg">
+        <div class="login-container">
+            <div class="login">
+                <div class="head">
+                    <h1>Droid7Project</h1>
+                    <br>
+                    <h2>Sign In</h2>
+                    <div class="head-sign-in"><span>Sign in here</span></div>
+                </div>
+
+                <form class="login-form" [formGroup]="signInForm">
+                    <mat-form-field appearance="outline" [floatLabel]="true">
+                        <mat-label>Email</mat-label>
+                        <input type="text" matInput formControlName="username" id="username" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
+                        <mat-icon matSuffix>email</mat-icon>
+                        <mat-error *ngIf="signInForm.controls.username.errors">
+                            <span class="error-span" *ngIf="signInForm.controls.username.errors.required">
+
+                                email is required</span>
+                            <span class="error-span" *ngIf="signInForm.controls.username.errors.email">Enter valid
+                                email</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" [floatLabel]="true">
+                        <mat-label>Enter password</mat-label>
+                        <input [type]="isPassword?'text':'password'" formControlName="password" id="password" matInput>
+                        <mat-icon class="cursor-pointer" matSuffix (click)="togglePassword()">
+                            {{isPassword?'visibility':'visibility_off'}}</mat-icon>
+                        <mat-error *ngIf="signInForm.controls.password.errors">
+                            <span class="error-span" *ngIf="signInForm.controls.password.errors.required">
+                                Password is required</span>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-error class="sign-in-error" *ngIf="isError">
+                        {{errorMessage}}
+                    </mat-error>
+                    <div class="bottom-button">
+                        <div class="width50 align-left mt8">
+                            <a routerLink="/forgotPassword" class="account-link">Forgot
+                                password</a>
+                        </div>
+                    </div>
+                    <mat-error class="sign-in-error" *ngIf="isError">
+                        {{errorMessage}}
+                    </mat-error>
+                    <div class="bottom-button">
+                        <div class="align-right mt8">
+                            <a routerLink="/createAccount" class="account-link">create account
+                            </a>    
+                        </div>
+                    </div>
+                    <div class="align-center">
+                        <button mat-raised-button color="primary" [routerLink]="['signIn']"
+                            routerLinkActive="active">Sign In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
